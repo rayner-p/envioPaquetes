@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+<body>
+	<h1>Registrar Remitente</h1>
+	<div class="navbar-default sidebar" role="navigation">
+		<div class="sidebar-nav navbar-collapse">
+			<ul class="nav" id="side-menu">
+
+				<li><a href="SolicitudesPoliza.xhtml"><i
+						class="fa   fa-pie-chart fa-fw"></i> Solicitudes </a></li>
+			</ul>
+		</div>
+	</div>
+	<br />
+	<br />
+	<h:form>
+
+
+		<h:panelGrid columns="2">
+
+			<h:outputLabel value="NOMBRES REMITENTE" />
+			<h:inputText value="#{soliBean.newProducto.nombeRemitente}" />
+			<h:outputLabel value="APELLIDOS" />
+			<h:inputText value="#{soliBean.newProducto.apellido}" />
+			<h:outputLabel value="DIRECCION " />
+			<h:inputText value="#{soliBean.newProducto.direccioRemitente}" />
+			<h:outputLabel value=" NOMBRE DESTINATARIO" />
+			<h:inputText value="#{soliBean.newProducto.nombreDestinario}" />
+			<h:outputLabel value="APELLIDO DESTINATARIO" />
+			<h:inputText value="#{soliBean.newProducto.apellidoDes}" />
+
+			<h:outputLabel value="DIRECCION DESTINATARIO" />
+			<h:inputText value="#{soliBean.newProducto.direccionDestino}" />
+			<h:outputLabel value=" DIRECCION ENTREGA PAQUETE" />
+			<h:inputText value="#{soliBean.newProducto.direccionEntregaPA}" />
+			<h:outputLabel value="DIRECCION RECOGIDA PAQUETE" />
+			<h:inputText value="#{soliBean.newProducto.direccionRecogidap}" />
+			<div class="col-sm-1">
+				<h:commandButton action="#{soliBean.registrarProducto()}"
+					class="btn btn-success btn-lg" value="Registrar"
+					style="width: 250px; height: 50px; color: black; text-align: rigt; background-color:
+									blue);" />
+			</div>
+
+
+		</h:panelGrid>
+	</h:form>
+
+</body>
+</html>

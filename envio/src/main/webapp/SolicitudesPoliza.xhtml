@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+<h:head>Solicitudes de paquetes</h:head>
+<body>
+	<div class="navbar-default sidebar" role="navigation">
+		<div class="sidebar-nav navbar-collapse">
+			<ul class="nav" id="side-menu">
+
+				<li><a href="registrarRemitente.xhtml"><i
+						class="fa   fa-pie-chart fa-fw"></i> Volver </a></li>
+			</ul>
+		</div>
+	</div>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:dataTable value="#{soliBean.lstSol}" var="poliL"
+				class="table" editable="false">
+				<h:column headerText="Codigo">
+					<h:outputText value="#{poliL.codigo}" />
+				</h:column>
+				<h:column headerText="Nombre Remitente">
+					<h:outputText value="#{poliL.nombeRemitente}" />
+				</h:column>
+				<h:column headerText="Apellido Remitente">
+					<h:outputText value="#{poliL.apellido}" />
+				</h:column>
+				<h:column headerText="Direccion Remitente">
+					<h:outputText value="#{poliL.direccioRemitente}" />
+				</h:column>
+				<h:column headerText="Nombre Destinatario">
+					<h:outputText value="#{poliL.nombreDestinario}" />
+				</h:column>
+				<h:column headerText="Apellido Destinatario">
+					<h:outputText value="#{poliL.apellidoDes}" />
+				</h:column>
+				
+				
+				<h:column headerText="Direccion Destino">
+					<h:outputText value="#{poliL.direccionDestino}" />
+				</h:column>
+				
+				<h:column headerText="Direccion Entrega">
+					<h:outputText value="#{poliL.direccionEntregaPA}" />
+				</h:column>
+				<h:column headerText="Direccion Recojo">
+					<h:outputText value="#{poliL.direccionRecogidap}" />
+				</h:column>
+				<h:column headerText=" Valor ">
+					<h:outputText value="#{poliL.precio}" />
+				</h:column>
+				
+
+			</h:dataTable>
+		</h:panelGrid>
+	</h:form>
+
+
+</body>
+</html>
